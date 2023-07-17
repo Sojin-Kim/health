@@ -10,12 +10,12 @@
 <title>health</title>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="../resources/js/common.js"></script>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/common.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/trainer/common.css">
 </head>
 <body>
 	<header>
-		<div id="main-header">
-			프로필/골드/설정 등 헤더 추가
+		<div id="trainer-header">
+			트레이너 전용
 		</div>
 	</header>
-	<div id="main-body">
+	<div id="trainer-body">
