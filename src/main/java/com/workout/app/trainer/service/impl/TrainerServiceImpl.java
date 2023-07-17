@@ -5,11 +5,19 @@ import org.springframework.stereotype.Service;
 
 import com.workout.app.trainer.dao.TrainerDao;
 import com.workout.app.trainer.service.TrainerService;
+import com.workout.app.trainer.vo.Trainer;
 
 @Service
 public class TrainerServiceImpl implements TrainerService{
 
 	@Autowired
 	private TrainerDao trainerDao;
+
+	@Override
+	public int insertJoin(Trainer trainer) {
+		System.out.println(trainer);
+		int result = trainerDao.insertJoin(trainer);
+		return result;
+	}
 
 }

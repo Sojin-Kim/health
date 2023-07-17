@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.workout.app.trainer.dao.TrainerDao">
+
+<insert id="insertJoin" parameterType="trainer">
+	INSERT INTO TB_TRNR (
+		  TRNR_ID
+	    , TRNR_PW
+	    , TRNR_NAME
+	    , TRNR_GENDER
+	    , TRNR_PHOTO
+	    , TRNR_INTRO
+	    , TRNR_AMT
+	    , CONSULT_YN
+	    , REFUSAL_YN
+	    , TRNR_LIKE
+	)
+	VALUES
+	(
+		 #{trnrId}
+		,#{trnrPw}
+		,#{trnrName}
+		,#{trnrGender}
+		,#{trnrPhoto}
+		,#{trnrIntro}
+		,#{trnrAmt}
+		,#{consultYn}
+		,#{refusalYn}
+		,#{trnrLike}
+	)
+</insert>
+
+<select id="selectMemberList" resultType="trainer">
+	select
+		*
+	from
+		cm_trnr
+</select>
+
+<select id="selectOneMember" resultType="trainer" parameterType="trainer">
+	select
+		*
+	from
+		cm_trnr
+    where trnr_id = #{userId}
+      and trnr_pw = #{password}
+</select>
+
+</mapper>
