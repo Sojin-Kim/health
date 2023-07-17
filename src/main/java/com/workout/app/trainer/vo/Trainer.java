@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Trainer {
 	private String userId;		/* 사용자ID */
-	private String email;		/* 이메일 */
 	private String password;    /* 비밀번호 */
 	private String name;        /* 사용자이름 */
+	private String email;		/* 이메일 */
 }
