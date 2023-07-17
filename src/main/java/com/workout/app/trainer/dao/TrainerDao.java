@@ -9,4 +9,6 @@ public interface TrainerDao {
 
 	int insertJoin(Trainer trainer);
 
+	Trainer selectOneMember(Trainer trainer);
+
 }

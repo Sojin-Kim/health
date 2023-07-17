@@ -20,4 +20,12 @@ public class TrainerServiceImpl implements TrainerService{
 		return result;
 	}
 
+	@Override
+	public Trainer selectOneMember(Trainer trainer) {
+		System.out.println(trainer);
+		Trainer result = trainerDao.selectOneMember(trainer);
+		System.out.println(result);
+		return result;
+	}
+
 }

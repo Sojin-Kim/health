@@ -1,9 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <jsp:include page="/WEB-INF/views/trainer/common/header.jsp"></jsp:include>
+<script type="text/javascript" src="../resources/js/trainer/login/join.js"></script>
 <!-- 
-  메인 화면
-  2023/07/07 ksj 추가 (헤더 샘플을 위해 추가함.)
+  트레이너 회원가입 화면
+  2023/07/17 ksj 추가
 -->
 
 <div>
