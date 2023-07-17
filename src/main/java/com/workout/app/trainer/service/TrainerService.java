@@ -6,4 +6,6 @@ public interface TrainerService {
 
 	int insertJoin(Trainer trainer);
 
+	Trainer selectOneMember(Trainer trainer);
+
 }

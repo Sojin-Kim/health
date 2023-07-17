@@ -10,7 +10,7 @@
 <title>health</title>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="../resources/js/common.js"></script>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/trainer/common.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/trainer/common/common.css">
 </head>
 <body>
 	<header>

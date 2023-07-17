@@ -32,20 +32,13 @@
 	)
 </insert>
 
-<select id="selectMemberList" resultType="trainer">
-	select
-		*
-	from
-		cm_trnr
-</select>
-
 <select id="selectOneMember" resultType="trainer" parameterType="trainer">
-	select
+	SELECT
 		*
-	from
-		cm_trnr
-    where trnr_id = #{userId}
-      and trnr_pw = #{password}
+	FROM
+		TB_TRNR
+    WHERE TRNR_ID = #{trnrId}
+      AND TRNR_PW = #{trnrPw}
 </select>
 
 </mapper>
