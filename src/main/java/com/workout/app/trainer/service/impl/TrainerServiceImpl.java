@@ -16,6 +16,8 @@ public class TrainerServiceImpl implements TrainerService{
 	@Override
 	public int insertJoin(Trainer trainer) {
 		System.out.println(trainer);
+		
+		// 비밀번호 암호화 추가하기
 		int result = trainerDao.insertJoin(trainer);
 		return result;
 	}

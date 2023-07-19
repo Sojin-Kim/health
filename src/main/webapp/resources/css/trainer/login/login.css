@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+#subHeader{
+	margin:0;
+	padding-top:50px;
+	padding-bottom:50px;
+	display: flex;
+  	justify-content: center;
+}
+
+#loginForm{    
+	display: flex;
+    justify-content: center;
+    flex-direction: column;
+	align-items: center;
+    width: 100%;
+}
+#loginTable{
+    width: 500px;
+    border-collapse : collapse;
+}
+
+.trLine{
+    border-top: 1px solid #ffc10794;
+    border-bottom: 1px solid #ffc10794;
+    height: 50px;
+}
+
+.tdHeader{
+	border-right: 1px solid #ffc10794;
+	width: 200px;
+}
+
+.tdBody{
+	padding-left:10px;
+}
+
+.text200{
+	background-color: #fdfef2;
+	width: 200px;
+	height: 25px;
+	border:none;
+	border-bottom: 2px solid black;
+	font-size: 17px;
+}
+
+.btn120{
+	background-color: #ffc10766;
+	height: 35px;
+	width: 120px;
+	border-radius: 25px;
+    margin-top: 40px;
+    font-size: 17px;
+}
