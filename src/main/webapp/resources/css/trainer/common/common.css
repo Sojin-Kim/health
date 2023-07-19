@@ -1,19 +1,18 @@
 @charset "UTF-8";
 html{
-	background-color: #fdfef2;
+	background-color: #fdfef2 !important;
 }
 
 body {
-  width: 100%;
-  height: 100%;
-  min-width:800px; /* 최소 넓이가 지원되는 브라우져를 위해서 ...FF, IE7, safari */
-  min-height:400px; /* 최소 넓이가 지원되는 브라우져를 위해서 ...FF, IE7, safari */
-  margin: 0px;
-  padding: 0px;  /* 옵션입니다.*/
-  /*overflow: hidden;*/
-  font-family: 'Jua', sans-serif;
-  /* 만약 콘텐츠를 가운데 정렬로 하고 싶은 경우 text-align: center 를 타이핑 하시고,
-     패딩값을 적당하게 올려주시면 됩니다.*/
+	width: 100%;
+	height: 100%;
+	min-width:800px; /* 최소 넓이가 지원되는 브라우져를 위해서 ...FF, IE7, safari */
+	min-height:400px; /* 최소 넓이가 지원되는 브라우져를 위해서 ...FF, IE7, safari */
+	margin: 0px;
+	padding: 0px;  /* 옵션입니다.*/
+	/*overflow: hidden;*/
+	font-family: 'Jua', sans-serif  !important;
+	background-color: #fdfef2 !important;
 }
 
 /* header.jsp */
@@ -29,12 +28,16 @@ body {
 	height:100%; /* 수정 예정 */
 }
 
+.my-nav {
+    background-color: #ffc10766 !important;
+}
+
 input{
-  font-family: 'Jua', sans-serif;
+  font-family: 'Jua', sans-serif  !important;
 }
 
 textarea{
-  font-family: 'Jua', sans-serif;
+  font-family: 'Jua', sans-serif  !important;
 }
 
 input[type=checkbox], input[type=radio] {

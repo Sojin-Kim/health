@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+#subHeader{
+	margin:0;
+	padding-top:15px;
+	padding-bottom:15px;
+	display: flex;
+  	justify-content: center;
+}
+
+#joinForm{    
+	display: flex;
+    justify-content: center;
+    flex-direction: column;
+	align-items: center;
+    width: 100%;
+}
+#joinTable{
+    width: 700px;
+    border-collapse : collapse;
+}
+
+.trLine{
+    border-bottom: 1px solid #ffc10794;
+    height: 33px;
+}
+
+.tdHeader{
+	/*background-color: #ffc10794;*/
+	border-right: 1px solid #ffc10794;
+	width: 200px;
+}
+
+.tdSubHeader{
+	border-right: 1px solid #ffc10794;
+	border-left: 1px solid #ffc10794;
+}
+
+.tdBody{
+	padding-left:10px;
+}
+
+input {
+    margin-right: 3px !important;
+}
+
+.text200{
+	background-color: #fdfef2;
+	width: 200px;
+	height: 25px;
+	border:none;
+	border-bottom: 2px solid black;
+	font-size: 17px;
+}
+
+.textarea480{
+	background-color: #fdfef2;
+	margin: 0px;
+	height: 200px;
+	width: 480px;
+	font-size: 17px;
+}
+
+.btn120{
+	background-color: #ffc10766;
+	height: 35px;
+	width: 120px;
+	border-radius: 25px;
+    margin-top: 15px;
+    font-size: 17px;
+}
+
+.btn150{
+	background-color: #ffc10766;
+	height: 25px;
+	width: 150px;
+	border-radius: 25px;
+    font-size: 15px;
+}
+
+.errorMsg{
+	font-size: 14px;
+	color:#ff0000;
+}
+
+.successMsg{
+	font-size: 14px;
+	color:#0000a0;
+}

@@ -43,12 +43,18 @@ public class TrainerController {
 		return "trainer/login/login";
 	}
 
-	//트레이너_로그인 화면 호출
+	//트레이너_개인정보수정 화면 호출
 	@GetMapping("/mypage")
 	public String trainerMypage(Model model) {
 		return "trainer/mypage";
 	}
 
+	//트레이너_일정수정 화면 호출
+	@GetMapping("/schedule")
+	public String trainerSchedule(Model model) {
+		return "trainer/schedule";
+	}
+	
 	//트레이너_회원가입 화면 호출
 	@ResponseBody
 	@PostMapping("/selectOneMember")
