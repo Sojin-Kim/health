@@ -30,4 +30,12 @@ public class TrainerServiceImpl implements TrainerService{
 		return result;
 	}
 
+	@Override
+	public int updateJoin(Trainer trainer) {
+		System.out.println(trainer);
+		
+		int result = trainerDao.updateJoin(trainer);
+		return result;
+	}
+
 }

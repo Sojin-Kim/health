@@ -11,4 +11,6 @@ public interface TrainerDao {
 
 	Trainer selectOneMember(Trainer trainer);
 
+	int updateJoin(Trainer trainer);
+
 }

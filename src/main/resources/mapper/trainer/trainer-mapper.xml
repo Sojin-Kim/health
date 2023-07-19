@@ -43,4 +43,17 @@
     </if>
 </select>
 
+<update id="updateJoin" parameterType="trainer">
+	UPDATE TB_TRNR
+	   SET TRNR_NAME  = #{trnrName}      
+	    , TRNR_GENDER = #{trnrGender}    
+	    , TRNR_PHOTO  = #{trnrPhoto}     
+	    , TRNR_INTRO  = #{trnrIntro}     
+	    , TRNR_AMT    = #{trnrAmt}       
+	    , CONSULT_YN  = #{consultYn}     
+	    , REFUSAL_YN  = #{refusalYn}     
+	    , TRNR_LIKE   = #{trnrLike}
+	 WHERE TRNR_ID = #{trnrId}
+</update>
+
 </mapper>
