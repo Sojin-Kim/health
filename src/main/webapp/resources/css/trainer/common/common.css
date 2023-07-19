@@ -43,3 +43,7 @@ textarea{
 input[type=checkbox], input[type=radio] {
     accent-color:black;
 }
+
+button, input, optgroup, select, textarea {
+	margin:1 !important;
+}

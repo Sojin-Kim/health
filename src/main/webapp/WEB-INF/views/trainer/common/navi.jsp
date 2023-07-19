@@ -7,7 +7,6 @@
   트레이너 회원가입 화면
   2023/07/17 ksj 추가
 -->
-
 <nav class="navbar navbar-expand-lg navbar-light my-nav">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">마이페이지</a>
@@ -16,8 +15,8 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="/app/trainer/mypage">개인 정보 수정</a>
-        <a class="nav-link" href="/app/trainer/schedule">일정 수정</a>
+        <a id="mypage" class="nav-link" href="/app/trainer/mypage">개인 정보 수정</a>
+        <a id="schedule" class="nav-link" href="/app/trainer/schedule">일정 수정</a>
       </div>
     </div>
   </div>

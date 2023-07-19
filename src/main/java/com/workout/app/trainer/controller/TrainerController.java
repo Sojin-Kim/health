@@ -49,6 +49,20 @@ public class TrainerController {
 		return "trainer/mypage";
 	}
 
+	//트레이너_개인정보수정 수정하기
+	@PostMapping("/updateJoin")
+	public String updateJoin(Trainer trainer) {
+		System.out.println(trainer);
+		int result = trainerService.updateJoin(trainer);
+		return "redirect:/trainer/mypage";
+	}
+
+	//트레이너_비밀번호수정 화면 호출
+	@GetMapping("/passwordPop")
+	public String trainerPasswordPop(Model model) {
+		return "trainer/passwordPop";
+	}
+
 	//트레이너_일정수정 화면 호출
 	@GetMapping("/schedule")
 	public String trainerSchedule(Model model) {
