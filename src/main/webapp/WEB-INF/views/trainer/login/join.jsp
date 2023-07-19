@@ -75,7 +75,7 @@
 		        <tr class="trLine">
 		            <td class="tdHeader" align="center">1회당 가격</td>
 		            <td class="tdBody" colspan="3">
-		            	<input size="15" type="text" class="text200" name="trnrAmt"> 
+		            	<input size="15" type="text" class="text200" name="trnrAmt" id="trnrAmt"> 
 		            	세부 설정가능하게?-> 별도 테이블 빼야함
 		            </td>
 		        </tr>
@@ -108,7 +108,7 @@
 	    </table>
 	    <p>
 	        <input type="button" class="btn120" onclick="join();" value="회원 가입"> 
-	        <input type="reset" class="btn120" value="다시 입력"> 
+	        <input type="reset" id="btnReset" class="btn120" value="다시 입력"> 
 	    </p>
 	</form>
 

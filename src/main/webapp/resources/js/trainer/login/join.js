@@ -10,6 +10,15 @@ $(document).ready(function(){
 	$("#trnrPw_check, #trnrPw").keyup(function(){
 		checkDuplPw();
 	});
+	
+	// 다시 입력 버튼 클릭 시 메세지 지우기
+	$("#btnReset").click(function(){
+		$("#idErrorMsg").html("");
+		$("#idSuccessMsg").html("");
+		$("#pwSuccessMsg").html("");
+		$("#pwErrorMsg").html("");
+	});
+	
 }); 
 
 // 아이디 중복 확인 버튼
@@ -96,10 +105,37 @@ function join(){
 	}
 	
 	// 이름 길이 체크
-	
-	console.log("계속 타는중");
+	var name =  $("#trnrName").val();
+	if(name.length > 50){
+		common.alert("이름이 길어 저장되지 않습니다. 관리자에게 문의 바랍니다.");
+		return false;
+	}
 	
 	// 자기소개/사진 제외 널 체크
+	var amt = $("#trnrAmt").val();
+	if(isEmpty(id)) { common.alert("아이디를 입력해주세요."); return false; }
+	if(isEmpty(pw)) { common.alert("비밀번호를 입력해주세요."); return false; }
+	if(isEmpty(pwCk)) { common.alert("비밀번호 확인을 입력해주세요."); return false; }
+	if(isEmpty(name)) { common.alert("이름을 입력해주세요."); return false; }
+	if(isEmpty(amt)) { common.alert("가격을 입력해주세요."); return false; }
+
+	//check 확인
+	if(!$('input:checkbox[name="trnrLike"]').is(":checked")){
+		common.alert("관심분야를 1개 이상 선택해주세요.");
+		return false;
+	}
+	if(!$('input:radio[name="trnrGender"]').is(":checked")){
+		common.alert("성별을 선택해주세요.");
+		return false;
+	}
+	if(!$('input:radio[name="consultYn"]').is(":checked")){
+		common.alert("상담 가능 여부를 선택해주세요.");
+		return false;
+	}
+	if(!$('input:radio[name="refusalYn"]').is(":checked")){
+		common.alert("예약거부 가능 여부를 선택해주세요.");
+		return false;
+	}
 	
-	//$("#joinForm").submit();
+	$("#joinForm").submit();
 }

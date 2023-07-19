@@ -5,18 +5,18 @@ $(document).ready(function(){
 
 // 로그인 버튼
 function login(){
-	/**
-	아이디/비번 조회해서 확인 후 세션 저장 -> 마이페이지로 이동
- */
-// 아이디/비번 널체크
+	// 아이디/비번 널체크
+	var id = $("#trnrId").val();
+	var pw = $("#trnrPw").val();
+	if(isEmpty(id)) { common.alert("아이디를 입력해주세요."); return false; }
+	if(isEmpty(pw)) { common.alert("비밀번호를 입력해주세요."); return false; }
 	
-	//var login = getSession("local","login");
 	$.ajax({
 	    url: "/app/trainer/selectOneMember", //request 보낼 서버의 경로
 	    type:'post', // 메소드(get, post)
 	    data: {
-				trnrId:$("#trnrId").val(),
-				trnrPw:$("#trnrPw").val()
+				trnrId:id,
+				trnrPw:pw
 			  },
 	    success: function(data) {
 	        //서버로부터 정상적으로 응답이 왔을 때 실행
@@ -37,20 +37,10 @@ function login(){
 
 // 회원가입 버튼
 function joinForm(){
-	/**
-	아이디/비번 확인 후 세션 저장
- */
 	location.href = "/app/trainer/join";
-	
-	//$("#loginForm").submit();
 }
 
 // 아이디/비밀번호 버튼
 function findInfo(){
-	/**
-	아이디/비번 확인 후 세션 저장
- */
-	
-	
-	//$("#loginForm").submit();
+	//location.href = "/app/trainer/join";
 }
