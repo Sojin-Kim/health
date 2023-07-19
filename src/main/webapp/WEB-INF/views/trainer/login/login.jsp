@@ -2,30 +2,34 @@
     pageEncoding="UTF-8"%>
 <jsp:include page="/WEB-INF/views/trainer/common/header.jsp"></jsp:include>
 <script type="text/javascript" src="../resources/js/trainer/login/login.js"></script>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/trainer/login/login.css">
 <!-- 
   트레이너 로그인 화면
   2023/07/17 ksj 추가
 -->
 
 <div>
-로그인
+    <h1 id="subHeader">로그인</h1>
 	<form id="loginForm" action="loginAction" method="post">
-	    <table border="1px" bordercolor="grey" align="center">
+	    <table id="loginTable">
 	        <tbody>
 		        <tr>
-		            <td bgcolor="lightgrey" align="center">아이디</td>
-		            <td><input size="15" type="text" id="trnrId" name="trnrId"></td>
+		            <td colspan="2" style="background-color:#ffc10766; height:35px;" align="center">로그인</td>
 		        </tr>
-		        <tr>
-		            <td bgcolor="lightgrey" align="center">비밀번호</td>
-		            <td><input size="15" type="password" id="trnrPw"name="trnrPw"></td>
+		        <tr class="trLine">
+		            <td class="tdHeader" align="center">아이디</td>
+		            <td class="tdBody"><input size="15" type="text" class="text200" id="trnrId" name="trnrId"></td>
+		        </tr>
+		        <tr class="trLine">
+		            <td class="tdHeader" align="center">비밀번호</td>
+		            <td class="tdBody"><input size="15" type="password" class="text200" id="trnrPw"name="trnrPw"></td>
 		        </tr>
 		    </tbody>
 	    </table>
         <p align="center">
-            <input type="button" onclick="login()" value="로그인"> 
-            <input type="button" onclick="findInfo()" value="아이디/비밀번호 찾기"> 
-            <input type="button" onclick="joinForm()" value="회원가입"> 
+            <input type="button" class="btn120" onclick="login()" value="로그인"> 
+            <input type="button" class="btn120" onclick="findInfo()" value="아이디/비밀번호 찾기"> 
+            <input type="button" class="btn120" onclick="joinForm()" value="회원가입"> 
         </p>
 	</form>
 

@@ -8,6 +8,7 @@ function login(){
 	/**
 	아이디/비번 조회해서 확인 후 세션 저장 -> 마이페이지로 이동
  */
+// 아이디/비번 널체크
 	
 	//var login = getSession("local","login");
 	$.ajax({
@@ -24,6 +25,8 @@ function login(){
 				location.href = "/app/trainer/mypage";
 				saveSession("local","trainerInfo",data.trainer);
 			}
+			
+			// 데이터 없을 경우 회원 정보 못찾음 alert
 	    },
 	    error: function(err) {
 	        //서버로부터 응답이 정상적으로 처리되지 못햇을 때 실행

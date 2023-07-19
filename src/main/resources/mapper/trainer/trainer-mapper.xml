@@ -38,7 +38,9 @@
 	FROM
 		TB_TRNR
     WHERE TRNR_ID = #{trnrId}
+    <if test='trnrPw != null and trnrPw != ""'>
       AND TRNR_PW = #{trnrPw}
+    </if>
 </select>
 
 </mapper>

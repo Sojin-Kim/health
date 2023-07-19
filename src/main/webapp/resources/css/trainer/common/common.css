@@ -1,4 +1,7 @@
 @charset "UTF-8";
+html{
+	background-color: #fdfef2;
+}
 
 body {
   width: 100%;
@@ -7,7 +10,8 @@ body {
   min-height:400px; /* 최소 넓이가 지원되는 브라우져를 위해서 ...FF, IE7, safari */
   margin: 0px;
   padding: 0px;  /* 옵션입니다.*/
-  overflow: hidden;
+  /*overflow: hidden;*/
+  font-family: 'Jua', sans-serif;
   /* 만약 콘텐츠를 가운데 정렬로 하고 싶은 경우 text-align: center 를 타이핑 하시고,
      패딩값을 적당하게 올려주시면 됩니다.*/
 }
@@ -15,9 +19,24 @@ body {
 /* header.jsp */
 #trainer-header{
 	background-color: #f8fef2;
-	height:200px;
+	height:150px;
+	text-align: center;
+    line-height: 150px;
+    border-bottom: 1px solid black;
 }
 #trainer-body{
 	background-color: #fdfef2;
-	height:80vh; /* 수정 예정 */
+	height:100%; /* 수정 예정 */
+}
+
+input{
+  font-family: 'Jua', sans-serif;
+}
+
+textarea{
+  font-family: 'Jua', sans-serif;
+}
+
+input[type=checkbox], input[type=radio] {
+    accent-color:black;
 }

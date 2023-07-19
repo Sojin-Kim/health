@@ -8,7 +8,7 @@ body {
   min-height:400px; /* 최소 넓이가 지원되는 브라우져를 위해서 ...FF, IE7, safari */
   margin: 0px;
   padding: 0px;  /* 옵션입니다.*/
-  overflow: hidden;
+ /* overflow: hidden;*/
   /* 만약 콘텐츠를 가운데 정렬로 하고 싶은 경우 text-align: center 를 타이핑 하시고,
      패딩값을 적당하게 올려주시면 됩니다.*/
 }
@@ -26,14 +26,14 @@ body {
   height: 1px;
 }
 /* ( 크롬, 사파리, 오페라, 엣지 ) 동작 */
-.scroll::-webkit-scrollbar {
+/*.scroll::-webkit-scrollbar {
   display: none;
 }
-
-.scroll {
-  -ms-overflow-style: none; /* 인터넷 익스플로러 */
-  scrollbar-width: none; /* 파이어폭스 */
-}
+*/
+/*.scroll {
+  -ms-overflow-style: none;  인터넷 익스플로러 
+  scrollbar-width: none;  파이어폭스 
+}*/
 
 /* header.jsp */
 #main-header{
@@ -42,7 +42,7 @@ body {
 }
 #main-body{
 	background-color: #fdfef2;
-	height:80vh; /* 수정 예정 */
+	height:100%; /* 수정 예정 */
 }
 
 

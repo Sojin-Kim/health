@@ -2,6 +2,51 @@
  * 공통함수
  */
 
+/**
+ *  alert/confirm 창 디자인을 위해 공통 함수 적용
+  		common.alert("비밀번호는 4~12자의 영문과 숫자로만 입력해야 합니다.").then((result) => {
+			if (result)	return false;	// 확인 버튼 클릭 시
+		});
+*/
+var common = {
+	alert: function(str, tMsg){ 	// tMsg 없으면 확인이 default
+		Swal.fire({
+		  text: str,
+		  showDenyButton: true,
+		  showCancelButton: false,
+		  confirmButtonText: isEmpty(tMsg) ? "확인" : tMsg,
+		}).then((result) => {
+			if(result.isConfirmed){
+				return true;
+			} else if (result.isDenied) {
+		    	return false;
+		  	}
+		})
+	},
+	
+	confirm: function(str, tMsg, fMsg){ 	// tMsg, fMsg 없으면 확인/취소가 default
+		Swal.fire({
+		  text: str,
+		  showDenyButton: true,
+		  showCancelButton: true,
+		  confirmButtonText: isEmpty(tMsg) ? "확인" : tMsg,
+		  cancelButtonText: isEmpty(fMsg) ? "취소" : fMsg
+		}).then((result) => {
+		  /* Read more about isConfirmed, isDenied below */
+		  	if(result.isConfirmed){
+				return true;
+			} else if (result.isDenied) {
+		    	return false;
+		  	}
+		/*  if (result.isConfirmed) {
+		    Swal.fire('Saved!', '', 'success')
+		  } else if (result.isDenied) {
+		    Swal.fire('Changes are not saved', '', 'info')
+		  }*/
+		})
+	}
+}
+
 /** 
  * 세션 저장
  * type : local(로컬 스토리지), session(세션 스토리지)
@@ -58,6 +103,16 @@ function isEmpty(param){
 		return true;
 	}
 	return false;
+}
+
+// 숫자와 영어로 이루어져 있는지 확인 : 맞으면 true 아니면 false
+function checkNumEng(param){
+	var noEngRule = /^[a-zA-Z0-9]*$/;
+    if(!noEngRule.test(param)) {
+        return false;
+    } else {
+        return true;
+    }
 }
 
 // 각자 필요한 공통코드 추가하기
