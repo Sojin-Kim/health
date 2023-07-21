@@ -20,5 +20,11 @@ public class MainController {
 	public String memberList(Model model) {
 		return "main/main";
 	}
+
+	//메인 화면 호출
+	@GetMapping("/sample")
+	public String sample(Model model) {
+		return "main/sample";
+	}
 	
 }
