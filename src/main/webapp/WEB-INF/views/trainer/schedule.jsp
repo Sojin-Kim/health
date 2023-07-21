@@ -5,10 +5,12 @@
 <script type="text/javascript">
 $(document).ready(function(){
 	$("#schedule").addClass('active');
+	
 });
+
 </script>
 <main>
-	일정 수정
+	일정 수정  
 	
 </main>
 <jsp:include page="/WEB-INF/views/trainer/common/footer.jsp"></jsp:include>

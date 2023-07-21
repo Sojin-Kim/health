@@ -10,6 +10,8 @@
 <title>health</title>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="../resources/js/common.js"></script>
+<script src="https://uicdn.toast.com/grid/latest/tui-grid.js"></script>
+<link rel="stylesheet" href="https://uicdn.toast.com/grid/latest/tui-grid.css" />
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/trainer/common/common.css">
 <!-- 폰트 디자인 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
