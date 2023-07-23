@@ -9,7 +9,7 @@
 -->
 
 <div>
-    <h1 id="subHeader">회원가입</h1>
+    <h1 id="subHeader">트레이너 회원가입</h1>
 	<form id="joinForm" action="insertJoin" method="post">
 	    <table id="joinTable">
 	        <tbody>

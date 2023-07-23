@@ -43,11 +43,11 @@
 	height: 600px;
 	item-align : center;
 }
-#asign{
+#asign, #trainer{
 	font-size: 10pt;
 }
 #login{
-	margin-left :300px;
+	margin-left :230px;
 	font-size: 10pt;
 }
 </style>
@@ -84,6 +84,9 @@
         </li>
         <li class="nav-item navLi" id="asign">
           <a class="nav-link" href="#">회원가입</a>
+        </li>
+        <li class="nav-item navLi" id="trainer">
+          <a class="nav-link" href="/app/trainer/login">트레이너전용</a>
         </li>
       </ul>
       <form class="d-flex" role="search">
