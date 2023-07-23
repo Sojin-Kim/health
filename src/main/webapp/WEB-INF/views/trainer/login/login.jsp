@@ -9,7 +9,7 @@
 -->
 
 <div>
-    <h1 id="subHeader">로그인</h1>
+    <h1 id="subHeader">트레이너 로그인</h1>
 	<form id="loginForm" action="loginAction" method="post">
 	    <table id="loginTable">
 	        <tbody>
