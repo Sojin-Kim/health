@@ -9,6 +9,8 @@ body {
   margin: 0px;
   padding: 0px;  /* 옵션입니다.*/
  /* overflow: hidden;*/
+  font-family: 'Jua', sans-serif  !important;
+  background-color: #fdfef2 !important;
   /* 만약 콘텐츠를 가운데 정렬로 하고 싶은 경우 text-align: center 를 타이핑 하시고,
      패딩값을 적당하게 올려주시면 됩니다.*/
 }
@@ -38,12 +40,127 @@ body {
 /* header.jsp */
 #main-header{
 	background-color: #f8fef2;
-	height:200px;
+	height:150px;
+	text-align: center;
+    line-height: 150px;
+    border-bottom: 1px solid black;
 }
 #main-body{
 	background-color: #fdfef2;
-	height:100%; /* 수정 예정 */
+	height:800px; /* 수정 예정 */
 }
+
+input{
+	font-family: 'Jua', sans-serif  !important;
+}
+
+textarea{
+	font-family: 'Jua', sans-serif  !important;
+}
+
+input[type=checkbox], input[type=radio] {
+    accent-color:black;
+}
+
+button, input, optgroup, select, textarea {
+	margin:1 !important;
+}
+
+.navLi > .active{
+	color:black;
+}
+
+.tui-grid-cell-header {
+	font-family: 'Jua', sans-serif  !important;
+	font-size: 12pt;
+	font-weight: normal;
+}
+
+.tui-grid-cell-content {
+	font-family: 'Jua', sans-serif  !important;
+}
+
+/* 개별 CSS */
+#subHeader{
+	margin:0;
+	padding-top:15px;
+	padding-bottom:15px;
+	display: flex;
+  	justify-content: center;
+}
+
+#gridDiv{
+    padding-left: 200px;
+    padding-right: 200px;
+    height: 550px;
+}
+
+.form-style{    
+	display: flex;
+    justify-content: center;
+    flex-direction: column;
+	align-items: center;
+    width: 100%;
+}
+.table-style{
+    width: 800px;
+    border-collapse : collapse;
+}
+
+.trLine{
+    border-top: 1px solid #ffc10794;
+    border-bottom: 1px solid #ffc10794;
+    height: 50px;
+}
+
+.tdHeader{
+	border-right: 1px solid #ffc10794;
+	width: 200px;
+}
+
+.tdBody{
+	padding-left:10px;
+}
+
+.gridPaging{
+	margin:0;
+	padding-top:15px;
+	padding-bottom:15px;
+	display: flex;
+  	justify-content: center;
+    height: 100px;
+}
+.page-link{
+    color:black !important;
+}
+/* 항목 길이 CSS - 각자 추가 */
+.btn120{
+	background-color: #ffc10766;
+	height: 35px;
+	width: 120px;
+	border-radius: 25px;
+    margin-top: 40px;
+    font-size: 17px;
+}
+
+.text400{
+	background-color: #fdfef2;
+	width: 400px;
+	height: 25px;
+	border:none;
+	border-bottom: 2px solid black;
+	font-size: 17px;
+}
+
+.textarea480{
+	background-color: #fdfef2;
+	margin: 0px;
+	height: 200px;
+	width: 480px;
+	font-size: 17px;
+}
+
+
 
 
 /* 하단 css는 가로모드 적용 시 테스트해볼것 */

@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.workout.app.member.model.dao.MemberDao">
+<mapper namespace="com.workout.app.member.dao.MemberDao">
 
 <select id="selectMemberList" resultType="member">
 	select

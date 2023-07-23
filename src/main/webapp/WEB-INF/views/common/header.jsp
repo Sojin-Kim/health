@@ -10,9 +10,10 @@
 <title>health</title>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="../resources/js/common.js"></script>
+<!-- <script type="text/javascript" src="https://uicdn.toast.com/tui.pagination/v3.4.0/tui-pagination.js"></script> -->
 <script src="https://uicdn.toast.com/grid/latest/tui-grid.js"></script>
 <link rel="stylesheet" href="https://uicdn.toast.com/grid/latest/tui-grid.css" />
-<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/trainer/common/common.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/common.css">
 <!-- 폰트 디자인 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,18 +22,21 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <!-- 메세지 창 디자인 -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 <style>
+.navbar-brand{
+	color:black;
+}
 .nav-link{
-	color : black;
+	color:gray;
 }
 .navLi{
 	margin-left :40px;
-	font-size: 8pt;
+	/* font-size: 10pt; */
 }
 
 .image-height{
@@ -40,11 +44,11 @@
 	item-align : center;
 }
 #asign{
-	font-size: 8pt;
+	font-size: 10pt;
 }
 #login{
 	margin-left :300px;
-	font-size: 8pt;
+	font-size: 10pt;
 }
 </style>
 </head>
@@ -73,7 +77,7 @@
           <a class="nav-link" href="#">이용후기</a>
         </li>
         <li class="nav-item navLi">
-          <a class="nav-link" href="#">샘플코드테스트</a>
+          <a class="nav-link" href="/app/machine/sample" id="sample">샘플코드테스트</a>
         </li>
         <li class="nav-item navLi" id="login">
           <a class="nav-link" href="#">로그인</a>
@@ -127,7 +131,7 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-<div id="trainer-body">
+<div id="main-body">
 
 <!-- <div id="btnHeader">
           <input type="button" class="btn120" onclick="login()" value="로그인"> 
