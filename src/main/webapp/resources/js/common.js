@@ -10,40 +10,22 @@
 */
 var common = {
 	alert: function(str, tMsg){ 	// tMsg 없으면 확인이 default
-		Swal.fire({
+		return Swal.fire({
 		  text: str,
 		  showDenyButton: true,
 		  showCancelButton: false,
 		  confirmButtonText: isEmpty(tMsg) ? "확인" : tMsg,
-		}).then((result) => {
-			if(result.isConfirmed){
-				return true;
-			} else if (result.isDenied) {
-		    	return false;
-		  	}
-		})
+		});
 	},
 	
 	confirm: function(str, tMsg, fMsg){ 	// tMsg, fMsg 없으면 확인/취소가 default
-		Swal.fire({
+		return Swal.fire({
 		  text: str,
 		  showDenyButton: true,
 		  showCancelButton: true,
 		  confirmButtonText: isEmpty(tMsg) ? "확인" : tMsg,
 		  cancelButtonText: isEmpty(fMsg) ? "취소" : fMsg
-		}).then((result) => {
-		  /* Read more about isConfirmed, isDenied below */
-		  	if(result.isConfirmed){
-				return true;
-			} else if (result.isDenied) {
-		    	return false;
-		  	}
-		/*  if (result.isConfirmed) {
-		    Swal.fire('Saved!', '', 'success')
-		  } else if (result.isDenied) {
-		    Swal.fire('Changes are not saved', '', 'info')
-		  }*/
-		})
+		});
 	}
 }
 

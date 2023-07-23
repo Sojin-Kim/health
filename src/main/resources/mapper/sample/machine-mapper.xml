@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.workout.app.sample.dao.MachineDao">
+
+<select id="selectMachineList" resultType="machine">
+	SELECT
+		   M_NUM
+		 , M_NAME
+		 , TO_CHAR(M_MAKE_DATE,'YYYY-MM-DD') M_MAKE_DATE
+		 , M_COMMENT
+	 FROM
+	  	   MACHINE_LIST
+	 ORDER BY M_NUM
+</select>
+
+<insert id="insertMachine" parameterType="machine">
+	INSERT INTO MACHINE_LIST (
+		  M_NUM
+		, M_NAME
+		, M_MAKE_DATE
+		, M_COMMENT
+	)
+	VALUES
+	(
+		  mnum_seq.nextval
+		,#{mName}
+		,SYSDATE
+		,#{mComment}
+	)
+</insert>
+
+<select id="selectMachineOne" resultType="machine">
+	SELECT
+		   M_NUM
+		 , M_NAME
+		 , TO_CHAR(M_MAKE_DATE,'YYYY-MM-DD') M_MAKE_DATE
+		 , M_COMMENT
+	 FROM
+	  	   MACHINE_LIST
+	WHERE M_NUM = #{mNum}
+</select>
+
+<update id="updateMachine" parameterType="machine">
+	UPDATE MACHINE_LIST 
+	   SET M_NAME = #{mName}
+	     , M_COMMENT = #{mComment}
+	 WHERE M_NUM = #{mNum}
+</update>
+
+<delete id="deleteMachine" parameterType="machine">
+	DELETE FROM MACHINE_LIST
+	 WHERE M_NUM = #{mNum}
+</delete>
+
+</mapper>

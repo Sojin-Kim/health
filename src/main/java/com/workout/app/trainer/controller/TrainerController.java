@@ -29,7 +29,7 @@ public class TrainerController {
 		return "trainer/login/join";
 	}
 
-	//트레이너_로그인 화면 호출
+	//트레이너_회원가입 등록
 	@PostMapping("/insertJoin")
 	public String insertJoin(Trainer trainer) {
 		System.out.println(trainer);
