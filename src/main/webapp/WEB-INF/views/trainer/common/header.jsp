@@ -27,7 +27,7 @@
 	            <input type="button" class="btn120" onclick="login()" value="로그인"> 
 	            <input type="button" class="btn120" onclick="joinForm()" value="회원가입"> 
 			</div> -->
-			<span>GYM_TRAINER_HEADER</span>
+			<span>트레이너 전용 화면</span>
 		</div>
 	</header>
 	<div id="trainer-body">

@@ -63,6 +63,20 @@ public class TrainerController {
 		return "trainer/passwordPop";
 	}
 
+	//트레이너_비밀번호수정 수정하기
+	@ResponseBody
+	@PostMapping("/updatePassword")
+	public Map<String, String> updatePassword(Trainer trainer) {
+		int uPw = trainerService.updatePassword(trainer);
+		Map<String, String> result = new HashMap<String, String>();
+		if(uPw > 0) {
+			result.put("result", "200");
+		}else {
+			result.put("result", "500");
+		}
+		return result;
+	}
+
 	//트레이너_일정수정 화면 호출
 	@GetMapping("/schedule")
 	public String trainerSchedule(Model model) {

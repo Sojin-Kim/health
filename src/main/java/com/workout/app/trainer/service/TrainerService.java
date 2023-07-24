@@ -10,4 +10,6 @@ public interface TrainerService {
 
 	int updateJoin(Trainer trainer);
 
+	int updatePassword(Trainer trainer);
+
 }
