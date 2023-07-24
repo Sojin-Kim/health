@@ -1,13 +1,10 @@
-package com.workout.app.sample.dao;
+package com.workout.app.machine.service;
 
 import java.util.List;
 
-import org.apache.ibatis.annotations.Mapper;
+import com.workout.app.machine.vo.Machine;
 
-import com.workout.app.sample.vo.Machine;
-
-@Mapper
-public interface MachineDao {
+public interface MachineService {
 
 	int insertMachine(Machine machine);
 

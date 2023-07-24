@@ -5,7 +5,7 @@
 <script type="text/javascript">
 $(document).ready(function(){
 	//nav 선택
-	$("#sample").addClass('active');
+	$("#machine").addClass('active');
 	
     // 그리드 설정 
 	selectMachineList();
@@ -85,7 +85,7 @@ const initGrid = () => {
      * 기타 옵션은 공식 document를 참조하자.
      */
     
-    const sampleGrid = new Grid({
+    const machineGrid = new Grid({
         el: document.getElementById('gridDiv'),
         scrollX: false,
         scrollY: true,
@@ -137,7 +137,7 @@ const initGrid = () => {
         ]
     });
      
-    /*  sampleGrid.applyTheme('custom', { 
+    /*  machineGrid.applyTheme('custom', { 
     	row: { 
     		hover: { 
 				background: '#00eeff' 
@@ -145,12 +145,12 @@ const initGrid = () => {
     	}
     }); */
      
-     sampleGrid.on('dblclick', ev => {
+     machineGrid.on('dblclick', ev => {
    		// 클릭한 Row의 정보를 dataRow에 저장
-   	    let dataRow = sampleGrid.getRow(ev.rowKey);
+   	    let dataRow = machineGrid.getRow(ev.rowKey);
    		
    		// 클릭한 Row의 색을 변경 (강조 효과, 클릭 했다는 효과를 줄 때)
-   		//sampleGrid.addSelectionOnly(ev.rowKey);
+   		//machineGrid.addSelectionOnly(ev.rowKey);
    		
    		// 클릭한 컬럼 이름이 "..." 인 경우
    		//if(ev.columnName == "_checked"){
@@ -162,7 +162,7 @@ const initGrid = () => {
    		//ridObject.dataClear();
    	});	
      
-    return sampleGrid;
+    return machineGrid;
 }
  
 </script>

@@ -77,7 +77,7 @@
           <a class="nav-link" href="#">이용후기</a>
         </li>
         <li class="nav-item navLi">
-          <a class="nav-link" href="/app/machine/sample" id="sample">샘플코드테스트</a>
+          <a class="nav-link" href="/app/machine/machineList" id="machine">샘플코드테스트</a>
         </li>
         <li class="nav-item navLi" id="login">
           <a class="nav-link" href="#">로그인</a>

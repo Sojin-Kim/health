@@ -4,7 +4,7 @@
 <script type="text/javascript">
 $(document).ready(function(){
 	//nav 선택
-	$("#sample").addClass('active');
+	$("#machine").addClass('active');
 	
     // 그리드 설정 
 	selectMachineOne();
@@ -62,7 +62,7 @@ function updateMachine(){
 			if(data.result == "200"){
 				common.alert("기구가 정상적으로 수정되었습니다.").then((result) => {
 					if(result.isConfirmed){
-						location.replace("/app/machine/sample");
+						location.replace("/app/machine/machineList");
 					}
 				});
 			}
@@ -90,7 +90,7 @@ function deleteMachine(){
 			if(data.result == "200"){
 				common.alert("기구가 정상적으로 삭제되었습니다.").then((result) => {
 					if(result.isConfirmed){
-						location.replace("/app/machine/sample");
+						location.replace("/app/machine/machineList");
 					}
 				});
 			}
