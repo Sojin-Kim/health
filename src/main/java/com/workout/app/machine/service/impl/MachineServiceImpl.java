@@ -1,13 +1,13 @@
-package com.workout.app.sample.service.impl;
+package com.workout.app.machine.service.impl;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.workout.app.sample.dao.MachineDao;
-import com.workout.app.sample.service.MachineService;
-import com.workout.app.sample.vo.Machine;
+import com.workout.app.machine.dao.MachineDao;
+import com.workout.app.machine.service.MachineService;
+import com.workout.app.machine.vo.Machine;
 import com.workout.app.trainer.vo.Trainer;
 
 @Service

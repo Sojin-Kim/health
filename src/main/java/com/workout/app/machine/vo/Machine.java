@@ -1,4 +1,4 @@
-package com.workout.app.sample.vo;
+package com.workout.app.machine.vo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

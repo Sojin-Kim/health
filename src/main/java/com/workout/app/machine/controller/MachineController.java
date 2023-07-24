@@ -1,4 +1,4 @@
-package com.workout.app.sample.controller;
+package com.workout.app.machine.controller;
 
 import java.util.HashMap;
 import java.util.List;
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.workout.app.sample.service.MachineService;
-import com.workout.app.sample.vo.Machine;
+import com.workout.app.machine.service.MachineService;
+import com.workout.app.machine.vo.Machine;
 
 @Controller
 @RequestMapping("/machine")
@@ -24,9 +24,9 @@ public class MachineController {
 	private MachineService machineService;
 
 	//메인 화면 호출
-	@GetMapping("/sample")
-	public String sample(Model model) {
-		return "sample/sample";
+	@GetMapping("/machineList")
+	public String machineList(Model model) {
+		return "machine/machineList";
 	}
 	
 	// 전체 리스트 조회
@@ -78,13 +78,13 @@ public class MachineController {
 	//메인 화면 호출
 	@GetMapping("/insertMachineForm")
 	public String insertMachineForm(Model model) {
-		return "sample/insertMachineForm";
+		return "machine/insertMachineForm";
 	}
 
 	//메인 화면 호출
 	@GetMapping("/updateMachineForm")
 	public String updateMachineForm(Model model) {
-		return "sample/updateMachineForm";
+		return "machine/updateMachineForm";
 	}
 	
 	//insert
