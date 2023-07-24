@@ -56,4 +56,10 @@
 	 WHERE TRNR_ID = #{trnrId}
 </update>
 
+<update id="updatePassword" parameterType="trainer">
+	UPDATE TB_TRNR
+	   SET TRNR_PW = #{trnrPw}
+	 WHERE TRNR_ID = #{trnrId}
+</update>
+
 </mapper>

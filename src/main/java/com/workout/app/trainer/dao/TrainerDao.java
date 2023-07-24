@@ -13,4 +13,6 @@ public interface TrainerDao {
 
 	int updateJoin(Trainer trainer);
 
+	int updatePassword(Trainer trainer);
+
 }

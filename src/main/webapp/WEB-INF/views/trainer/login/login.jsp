@@ -28,7 +28,7 @@
 	    </table>
         <p align="center">
             <input type="button" class="btn120" onclick="login()" value="로그인"> 
-            <input type="button" class="btn120" onclick="findInfo()" value="아이디/비밀번호 찾기"> 
+            <input type="button" class="btn180" onclick="findInfo()" value="아이디/비밀번호 찾기"> 
             <input type="button" class="btn120" onclick="joinForm()" value="회원가입"> 
         </p>
 	</form>

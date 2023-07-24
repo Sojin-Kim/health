@@ -3,6 +3,7 @@ package com.workout.app.trainer.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.workout.app.machine.vo.Machine;
 import com.workout.app.trainer.dao.TrainerDao;
 import com.workout.app.trainer.service.TrainerService;
 import com.workout.app.trainer.vo.Trainer;
@@ -38,4 +39,12 @@ public class TrainerServiceImpl implements TrainerService{
 		return result;
 	}
 
+	@Override
+	public int updatePassword(Trainer trainer) {
+		System.out.println(trainer);
+
+		int result = trainerDao.updatePassword(trainer);
+		return result;
+	}
+	
 }
