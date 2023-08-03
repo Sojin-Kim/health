@@ -31,6 +31,12 @@
 	width: 200px;
 }
 
+.tdHeader2{
+	/*background-color: #ffc10794;*/
+	border-right: 1px solid #ffc10794;
+	width: 100px;
+}
+
 .tdSubHeader{
 	border-right: 1px solid #ffc10794;
 	border-left: 1px solid #ffc10794;
@@ -128,4 +134,17 @@ input {
 
 #calendar{
 	border: 5px solid black;
+}
+
+.timeSpan{
+	font-size:7pt;
+	padding-left:2px;
+}
+
+#timeSpanDiv{
+	padding-left:24px;
+}
+
+#timeBtnDiv{
+	padding-left:10px;
 }

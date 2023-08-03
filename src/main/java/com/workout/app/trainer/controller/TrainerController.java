@@ -1,6 +1,7 @@
 package com.workout.app.trainer.controller;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -89,6 +90,43 @@ public class TrainerController {
 	public Map<String, String> selectOneMember(Trainer trainer, Model model) throws Exception {
 		System.out.println(trainer);
 		Trainer sTrainer = trainerService.selectOneMember(trainer);
+		model.addAttribute("result", sTrainer);
+
+		System.out.println(sTrainer);
+		Map<String, String> result = new HashMap<String, String>();
+		ObjectMapper mapper = new ObjectMapper();
+		String trainerString = mapper.writeValueAsString(sTrainer);
+		if(sTrainer != null) {
+			result.put("result", "200");
+			result.put("trainer", trainerString);
+		}else {
+			result.put("result", "500");
+		}
+		return result;
+	}
+
+	//트레이너_일정수정(저장)
+	@ResponseBody
+	@PostMapping("/insertOneDay")
+	public Map<String, String> insertOneDay(Trainer trainer) throws Exception {
+		System.out.println(trainer);
+		int cnt = trainerService.insertOneDay(trainer);
+		
+		Map<String, String> result = new HashMap<String, String>();
+		if(cnt > 0) {
+			result.put("result", "200");
+		}else {
+			result.put("result", "500");
+		}
+		return result;
+	}
+
+	//트레이너_일정수정(조회)
+	@ResponseBody
+	@PostMapping("/selectMonthTime")
+	public Map<String, String> selectMonthTime(Trainer trainer, Model model) throws Exception {
+		System.out.println(trainer);
+		List<Trainer> sTrainer = trainerService.selectMonthTime(trainer);
 		model.addAttribute("result", sTrainer);
 
 		System.out.println(sTrainer);

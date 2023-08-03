@@ -12,6 +12,7 @@ $(document).ready(function(){
 	
 });
 
+// 정보 조회
 function srchInfo(){
 	var trainer = JSON.parse(getSession("local","trainerInfo")); // 세션 정보 조회
 	var id = trainer.trnrId;
@@ -48,6 +49,8 @@ function srchInfo(){
 	    }
 	});
 }
+
+// 저장
 function updateInfo(){
 	// 이름 길이 체크
 	var name =  $("#trnrName").val();
@@ -82,6 +85,7 @@ function updateInfo(){
 	$("#joinForm").submit();
 }
 
+// 비밀번호 변경
 function changePw(){
 
 	//창 크기 지정
