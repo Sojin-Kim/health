@@ -34,7 +34,16 @@
 
 <select id="selectOneMember" resultType="trainer" parameterType="trainer">
 	SELECT
-		*
+		  TRNR_ID
+	    , TRNR_PW
+	    , TRNR_NAME
+	    , TRNR_GENDER
+	    , TRNR_PHOTO
+	    , TRNR_INTRO
+	    , TRNR_AMT
+	    , CONSULT_YN
+	    , REFUSAL_YN
+	    , TRNR_LIKE
 	FROM
 		TB_TRNR
     WHERE TRNR_ID = #{trnrId}
@@ -61,5 +70,37 @@
 	   SET TRNR_PW = #{trnrPw}
 	 WHERE TRNR_ID = #{trnrId}
 </update>
+
+<delete id="deleteOneDay">
+	DELETE TB_TRNR_TIME
+	WHERE TRNR_ID = #{trnrId}
+      AND TRNR_DATE = #{trnrDate}
+</delete>
+
+<insert id="insertOneDay" parameterType="trainer">
+	INSERT INTO TB_TRNR_TIME (
+	       TRNR_ID
+	     , TRNR_DATE
+	     , TRNR_TIME
+	     , TRNR_YN
+	 )
+	 VALUES
+	 (
+		  #{trnrId}
+		, #{trnrDate}
+		, #{trnrTime}
+		, 'Y'
+	 )
+</insert>
+
+<select id="selectMonthTime" resultType="trainer" parameterType="trainer">
+	SELECT TO_CHAR(TRNR_DATE, 'YYYY-MM-DD') RTN_TRNR_DATE
+	     , LISTAGG(TRNR_TIME, ',') WITHIN GROUP (ORDER BY TRNR_TIME DESC) AS TRNR_TIME
+	FROM TB_TRNR_TIME
+	WHERE TRNR_ID = #{trnrId}
+	AND TO_CHAR(TRNR_DATE, 'YYYY-MM') = #{selectMonth}
+	AND TRNR_YN = 'Y' 
+	GROUP BY TRNR_DATE
+</select>
 
 </mapper>

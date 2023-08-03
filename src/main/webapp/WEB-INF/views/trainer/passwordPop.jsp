@@ -19,6 +19,8 @@
 <script type="text/javascript">
 const urlParams = new URL(location.href).searchParams;
 const id = urlParams.get('id');
+
+// 비밀번호 조회
 function updatePw(){
 	var pw = $("#trnrPw").val();
 	var nPw = $("#newTrnrPw").val();
@@ -56,6 +58,7 @@ function updatePw(){
 	});
 }
 
+// 비밀번호 변경
 function upDt(){  
 	var nPw = $("#newTrnrPw").val();
 	$.ajax({

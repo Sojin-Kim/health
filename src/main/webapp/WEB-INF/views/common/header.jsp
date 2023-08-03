@@ -51,6 +51,22 @@
 	font-size: 10pt;
 }
 </style>
+
+<script type="text/javascript">
+$(document).ready(function () {
+    $("#trainer").click(function(){
+    	var sessionTrainer = getSession("local","trainerInfo");
+    	
+    	console.log(sessionTrainer);
+    	
+    	if(sessionTrainer != null){
+    		location.href = "/app/trainer/schedule";
+    	}else{
+    		location.href = "/app/trainer/login";
+    	}
+    });
+});
+</script>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -86,7 +102,7 @@
           <a class="nav-link" href="#">회원가입</a>
         </li>
         <li class="nav-item navLi" id="trainer">
-          <a class="nav-link" href="/app/trainer/login">트레이너전용</a>
+          <a class="nav-link" id="trainer">트레이너전용</a>
         </li>
       </ul>
       <form class="d-flex" role="search">

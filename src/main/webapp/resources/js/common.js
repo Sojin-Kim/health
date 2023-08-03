@@ -97,4 +97,44 @@ function checkNumEng(param){
     }
 }
 
+// 현재 일자 가져오기
+function today(){
+	var now = new Date();	// 현재 날짜 및 시간
+
+	return now.getFullYear() + "-" + ((now.getMonth()+1) < 10 ? "0"+(now.getMonth()+1) : (now.getMonth()+1)) + "-" + (now.getDate() < 10 ? ("0"+now.getDate()): now.getDate());
+}
+
+// 말일 가져오기
+function lastDay(){
+	var now = new Date();	// 현재 날짜 및 시간
+	var last = new Date(now.getFullYear(), (now.getMonth()+1), 0);
+	return now.getFullYear() + "-" + ((now.getMonth()+1) < 10 ? "0"+(now.getMonth()+1) : (now.getMonth()+1)) + "-" + last.getDate();
+}
+
+// 정해진 일자 포맷으로 가져오기
+function dayFormat(day){
+	var now = new Date(day);	// 현재 날짜 및 시간
+
+	return now.getFullYear() + "-" + ((now.getMonth()+1) < 10 ? "0"+(now.getMonth()+1) : (now.getMonth()+1)) + "-" + (now.getDate() < 10 ? ("0"+now.getDate()): now.getDate());
+}
+
+// 정해진 월 포맷으로 가져오기
+function monthFormat(day){
+	var now = new Date(day);	// 현재 날짜 및 시간
+
+	return now.getFullYear() + "-" + ((now.getMonth()+1) < 10 ? "0"+(now.getMonth()+1) : (now.getMonth()+1));
+}
+
+// 시작일과 종료일 사이 일자 구하기
+function getDatesStartToLast(startDate, lastDate) {
+	var regex = RegExp(/^\d{4}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$/);
+	if(!(regex.test(startDate) && regex.test(lastDate))) return "Not Date Format";
+	var result = [];
+	var curDate = new Date(startDate);
+	while(curDate <= new Date(lastDate)) {
+		result.push(curDate.toISOString().split("T")[0]);
+		curDate.setDate(curDate.getDate() + 1);
+	}
+	return result;
+}
 // 각자 필요한 공통코드 추가하기
